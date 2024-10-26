@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>a</title>
+</head>
+
+<body>
+    <div id="top2"></div>
+    <a name="top1"></a>
+    <a href="#bottom">去底部</a>
+    <!-- 1.行内元素：但可以包裹块元素，除了它自身 -->
+
+    <!-- 2.target属性 -->
+    <!-- 新建标签 -->
+    <a href="https://www.baidu.com" target="_blank">百度一下</a>
+    <!-- 当前页，默认-->
+    <a href="https://www.baidu.com" target="_self">百度一下</a>
+    <a href="./排版.html">去排版标签</a>
+
+    <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+    <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+
+    <!-- 3 -->
+    <!-- 浏览器可以直接打开的文件会直接跳转 -->
+    <!-- 浏览器无法直接打开的文件会触发下载 -->
+    <!-- 但可以设置download属性在点击时强制触发下载 -->
+    <a href="../note_pic/常见图片格式.png" download="图片格式笔记">下载笔记</a>
+
+    <!-- 4.1设置锚点：用两个a标签，将href（值为#+name的值）与name属性联用-->
+    <!-- 4.2设置锚点：使用id属性，单个a标签即可完成-->
+    <a name="bottom"></a>
+    <a href="#top1">去顶部-name</a>
+    <a href="#top2">去顶部-id</a>
+
+    <!-- 特殊的，想回到顶部，可直接设置href="#" -->
+    <a href="#">去顶部-#</a>
+
+    <!-- href="",刷新页面 -->
+    <a href="">刷新页面</a>
+
+    <br>
+    <!-- 5.链到指定媒体应用 -->
+    <a href="tel:10010">电话联系</a>
+    <a href="mailto:1234567@qq.com">邮件联系</a>
+    <a href="sms:10010">短信联系</a>
+
+
+</body>
+
+</html>

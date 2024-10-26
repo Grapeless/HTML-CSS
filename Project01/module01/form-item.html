@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>form-item</title>
+</head>
+
+<body>
+    <form action="https://search/jd/com/search">
+        <!-- 0.通用属性 -->
+        <!-- name:键 value:值 一般为：每个表单项的数据以一个（或多个如checkbox）键值对（name=value)的形式返回,通过&连接-->
+        <!-- disabled:禁用表单项 -->
+
+        <!-- 1.文本输入框 -->
+        <!-- value：不必要，设置后是输入框的默认的真实值且会被显示，会被输入的数据更改 -->
+        <!-- maxlength:输入框的最大长度 -->
+        <label>账户: <input type="text" name="account" value="123" maxlength="10"></label><br><br>
+
+        <!-- 2.密码输入框 -->
+        <!-- 其value值一般无意义 -->
+        <label>账户: <input type="password" name="pwd" value="123" maxlength="6"></label><br><br>
+
+        <!-- 3.单选 -->
+        <!-- checked：设置该项为真 -->
+        <!-- name：根据其值来划分一个单选组 -->
+        <!-- value：必要，若不设置，则返回一个"on"，无意义 -->
+        <label><input type="radio" name="gender" value="male" checked>男</label>
+        <label><input type="radio" name="gender" value="female">女</label><br><br>
+
+        <!-- 4.多选 -->
+        <label><input type="checkbox" name="hobby" value="game" checked>游戏</label>
+        <label><input type="checkbox" name="hobby" value="sleep">睡觉</label>
+        <label><input type="checkbox" name="hobby" value="eat">吃饭</label><br><br>
+
+        <!-- 5.隐藏域 -->
+        <!-- 不可见，用于提交一些固定的数据 -->
+        <input type="hidden" name="tag" value="111">
+
+        <!-- 6.提交按钮，不传递数据而用来提交数据，不设置name，否则变为一般表单而无法提交数据-->
+        <!-- 6.1 button-->
+        <!-- 默认设为type="submit" -->
+        <!-- <button type="submit">提交</button> -->
+        <button>提交</button>
+        <!-- 6.2 input -->
+        <!-- value:设置按钮上显示的文本，不设置默认为"提交" -->
+        <input type="submit">
+        <input type="submit" value="确认"><br><br>
+
+        <!-- 7.重置按钮，不传递数据而用来重置表单，不设置name，否则变为一般表单而无法重置表单-->
+        <!-- 7.1. button -->
+        <button type="reset">重置</button>
+        <!-- 7.2 input-->
+        <!-- value:设置按钮上显示的文本，不设置默认为"重置" -->
+        <input type="reset">
+        <input type="reset" value="点我重置"><br><br>
+
+        <!-- 8.普通按钮 -->
+        <!-- 8.1 button -->
+        <button type="button">普通按钮：一般用于绑定JS事件</button><br><br>
+        <!-- 8.2 input -->
+        <input type="button" value="普通按钮"><br><br>
+
+
+        <!-- 9.文本域 -->
+        <textarea name="desc" cols="20" rows="5"></textarea><br><br>
+
+        <!-- 10.下拉框 -->
+        <!-- selected:设置默认值 -->
+        <span>水果：<select name="food">
+            <!-- 不加value默认value值为其中的文本如柠檬 -->
+            <option value="lemon">柠檬</option>
+            <option value="orange">橘子</option>
+            <option value="grape" selected>葡萄</option>
+        </select></span><br><br>
+
+
+        <!-- label关联 -->
+        <!-- 1.通过for-id -->
+        <label for="qqq"> 关联到下面的输入框</label>
+        <input type="text" name="qwe" id="qqq">
+        <!-- 2.通过label包裹 -->
+
+    </form>
+</body>
+
+</html>

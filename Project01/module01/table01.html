@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>table</title>
+</head>
+
+<body>
+    <!-- 1.组成元素：table(caption,thead,tbody(tr,th,th),tfoot) -->
+    <!-- 2.table的height，决定表格的最小高度，但只能影响tbody的高度来影响整个表格高度-->
+    <table border="1px" cellspacing="0" width="500px" height="300px">
+        <!-- 3.caption 表格标题 无属性-->
+        <caption>xx表</caption>
+        <!-- 4.thead 表头 -->
+        <!-- 4.1 height，其值可大于table的height -->
+        <!-- 4.2 valign，垂直方向的对齐方式，可选值:top,middle,bottom -->
+        <thead height="50px" align="center" valign="middle">
+            <tr>
+                <th>标题一</th>
+                <th>标题二</th>
+                <th>标题三</th>
+                <th>标题四</th>
+            </tr>
+        </thead>
+        <!-- 5.tbody 表体 -->
+        <!-- 5.1height若与thead，tfoot的head值和不足table的height，则会被覆盖，且规定了所有tr height和的最小值 -->
+        <!-- 5.2 align默认值为left -->
+        <tbody height="200" align="center" valign="middle">
+            <!-- 7.tr 拥有的属性还是老三样 -->
+            <tr height="50px" align="center" valign="middle">
+                <!-- 8.td,th 老三样属性，单独设置一个单元格的样式，但调整其宽高会影响所在行,列的宽高 -->
+                <td>data</td>
+                <td>data</td>
+                <td>data</td>
+                <td>data</td>
+            </tr>
+            <tr height="50px" align="center" valign="middle">
+                <td>data</td>
+                <td>data</td>
+                <td>data</td>
+                <td>data</td>
+            </tr>
+            <tr > <!--  <tr height="50px" >若所有tr的高度已被设置而和小于tbody的高度则所有tr的高度被覆盖-->
+                <td>data</td>
+                <td>data</td>
+                <td>data</td>
+                <td>data</td>
+            </tr>
+        </tbody>
+        <!-- 6.tfoot 脚注 align默认值为left-->
+        <tfoot height="50px" align="center" valign="middle">
+            <td></td>
+            <td></td>
+            <td></td>
+            <td>共计：</td>
+        </tfoot>
+    </table>
+</body>
+
+</html>
