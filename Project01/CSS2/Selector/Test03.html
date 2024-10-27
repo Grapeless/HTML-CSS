@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>结构伪类选择器02</title>
+    <style>
+        /* 7. :nth-last-child(2) */
+        div>p:nth-last-child(2) {
+            color: red;
+        }
+
+        /* 8. :nth-last-of-type(2) */
+        div>p:nth-last-of-type(2) {
+            color: greenyellow;
+        }
+
+        /* 9. :only-child 选择在其父元素中唯一的子元素。也即没有任何兄弟元素的元素*/
+        span:only-child {
+            color: yellow;
+        }
+
+        /* 10. :only-of-type 选择在其父元素中唯一的子元素。也即没有兄弟元素(同类型)的元素 */
+        span:only-of-type {
+            color: blue;
+        }
+
+        /*11. :root 根元素，等同于在<html>上应用*/
+        :root{
+            background-color: skyblue;
+        }
+
+        /*12. el:empty 选择的是没有内容的el元素*/
+        div:empty{
+            width: 100px;
+            height: 100px;
+            background-color: hotpink;
+        }
+    </style>
+</head>
+
+<body>
+    <div>
+        <span>111</span>
+    </div>
+
+    <div>
+        <span>666</span>
+        <p>777</p>
+        <p>888</p>
+        <p>999</p>
+    </div>
+
+    <div></div>
+</body>
+
+</html>

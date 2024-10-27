@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>目标伪类选择器</title>
+    <style>
+        div {
+            height: 300px;
+            background-color: gray;
+        }
+
+        /* el:target 选中el中当前正成为锚点的元素 */
+        div:target{
+            background-color: yellow;
+        }
+        a:target{
+            color: red;
+        }
+    </style>
+</head>
+
+<body>
+    <a href="#aid">aid</a>
+    <a href="#aname">aname</a>
+    <a href="#div">d</a>
+    <a href="#two">去下面</a>
+
+    <div>one</div><br>
+    <div id="two">two</div><br>
+    <div>three</div><br>
+    <a href="" id="aid">aid</a>
+    <a href="" name="aname">aname</a>
+    <div name="div">ddd</div>
+</body>
+
+</html>

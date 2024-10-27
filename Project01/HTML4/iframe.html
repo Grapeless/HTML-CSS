@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>iframe</title>
+</head>
+
+<body>
+    <!-- 嵌入一个网页 -->
+    <iframe src="https://www.taobao.com" frameborder="0" width="500" height="300"></iframe>
+    <!-- 嵌入其他内容 -->
+    <iframe src="../favicon.ico" frameborder="0"> </iframe>
+
+    <!-- 其name属性与表单，超链接的target属性配合使用 -->
+    <a href="https://www.taobao.com" target="container">点我到淘宝</a>
+    <form action="https://so.toutiao.com/search" target="container">
+        <input type="text" name="keyword">
+        <button>搜索</button>
+    </form>
+
+    <iframe name="container" frameborder="0"></iframe>
+
+</body>
+
+</html>

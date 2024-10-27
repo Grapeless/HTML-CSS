@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>否定伪类选择器</title>
+    <style>
+        /*1. el:not(选择器) 从el中排除 */
+        div>p:not(.c1){
+            color: red;
+        }
+    </style>
+</head>
+<body>
+    <div>
+        <p>666</p>
+        <p>777</p>
+        <p class="c1">888</p>
+        <p>999</p>
+    </div>
+</body>
+</html>

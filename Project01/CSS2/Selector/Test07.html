@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>语言伪类选择器</title>
+    <style>
+        /* el:lang(language) 选中el中lang符合条件的元素，与实际语言无关，只与其中设置语言有关*/
+        /* el缺省则选中所有lang符合条件的元素 */
+        div:lang(en) {
+            color: red;
+        }
+    </style>
+</head>
+
+<body>
+    <div>这是中文</div>
+    <div lang="en">这是英语？？？</div>
+    <div>这是中文</div>
+</body>
+
+</html>

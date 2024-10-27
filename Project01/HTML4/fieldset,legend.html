@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>form-item</title>
+</head>
+
+<body>
+    <form action="https://search/jd/com/search">
+        <!-- 1.fieldset:为表单控件分组 -->
+        <!-- 2.legend:是分组的标题-->
+        <fieldset>
+            <legend>主要信息</legend>
+            <label>账户: <input type="text" name="account" value="123" maxlength="10"></label><br><br>
+
+            <label>账户: <input type="password" name="pwd" value="123" maxlength="6"></label><br><br>
+
+            <label><input type="radio" name="gender" value="male" checked>男</label>
+            <label><input type="radio" name="gender" value="female">女</label><br><br>
+
+            <label><input type="checkbox" name="hobby" value="game" checked>游戏</label>
+            <label><input type="checkbox" name="hobby" value="sleep">睡觉</label>
+            <label><input type="checkbox" name="hobby" value="eat">吃饭</label><br><br>
+        </fieldset>
+
+        <fieldset>
+            <legend>次要信息</legend>
+            <input type="hidden" name="tag" value="111">
+
+            <button>提交</button>
+            <input type="submit">
+            <input type="submit" value="确认"><br><br>
+
+            <button type="reset">重置</button>
+            <input type="reset">
+            <input type="reset" value="点我重置"><br><br>
+
+            <button type="button">普通按钮：一般用于绑定JS事件</button><br><br>
+            <input type="button" value="普通按钮"><br><br>
+            <textarea name="desc" cols="20" rows="5"></textarea><br><br>
+
+        </fieldset>
+
+
+        
+        <span>水果：<select name="food">
+                <option value="lemon">柠檬</option>
+                <option value="orange">橘子</option>
+                <option value="grape" selected>葡萄</option>
+            </select></span><br><br>
+
+
+        <label for="qqq"> 关联到下面的输入框</label>
+        <input type="text" name="qwe" id="qqq">
+
+    </form>
+</body>
+
+</html>

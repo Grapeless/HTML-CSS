@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>UI伪类选择器</title>
+    <style>
+        /*1. :checked 单/复选框被勾选时*/
+        input:checked {
+            width: 100px;
+            height: 100px;
+            /* 无法应用颜色属性 */
+        }
+
+        /*2. :disabled  输入框被禁用时*/
+        input:disabled {
+            background-color: black;
+        }
+
+        /* 3. :enabled  不在禁用时（启用时，推荐直接用元素选择器input设置达到同样效果*/
+        input:enabled{
+            background-color: bisque;
+        }
+
+    </style>
+</head>
+
+<body>
+    <input type="checkbox" name="" id="">
+    <input type="text" disabled>
+    <input type="text" >
+
+</body>
+
+</html>

@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>动态伪类选择器</title>
+    <style>
+        /* 链接的四个伪类需遵从声明顺序：l -> v -> h -> a */
+        /* 未访问（被选中） */
+        #bd:link {
+            color: beige;
+        }
+
+        /* 访问过 */
+        #bd:visited {
+            color: coral
+        }
+
+        /* 鼠标悬浮之上时 */
+        #bd:hover {
+            color: skyblue;
+        }
+
+        /* 激活时（按下鼠标不松开） */
+        #bd:active {
+            color: yellow;
+        }
+
+        /* 一般元素只有hover,active伪类 */
+        span:hover {
+            color: skyblue;
+        }
+
+        span:active {
+            color: yellow;
+        }
+
+        /* 表单类元素的focus伪类 获取焦点时*/
+        input:focus {
+            background-color: darkgray;
+        }
+    </style>
+</head>
+
+<body>
+    <a href="https://www.baidu.com" id="bd">百度</a>
+    <a href="https://www.jd.com" id="jd">京东</a>
+    <span>666</span><br>
+    <input type="text"><br>
+    <input type="text">
+</body>
+
+</html>
