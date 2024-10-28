@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>伪元素选择器</title>
+    <style>
+        /* 操作一个不存在的元素。选中元素中的一些特殊位置。*/
+        /*1. el::first-letter el的第一个元素 */
+        p::first-letter {
+            color: red;
+            font-size: 40px;
+        }
+
+        /*2. el::first-line el的第一行*/
+        p::first-line {
+            background-color: yellow;
+        }
+
+        /*3. el::selection el中被选中的元素  */
+        p::selection {
+            background-color: greenyellow;
+            color: orange;
+        }
+
+        /*4 el::placeholder */
+        input::placeholder {
+            color: skyblue;
+        }
+
+        /*5. el::before 在el元素头部添加，配合content属性指定内容*/
+        p::before {
+            content: "Start";
+
+        }
+
+        /*6. el::after */
+        p::after {
+            content: "End";
+            color: blue;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- lorem + n -->
+    <p>
+        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quibusdam perferendis quidem, molestias fugit error
+        officiis consectetur, expedita obcaecati quis iste minus, quam ipsa at iure aliquid eveniet placeat ipsam
+        distinctio.
+    </p>
+    <div>
+        <input type="text" placeholder="666666666666">
+    </div>
+    <p>
+        ...
+    </p>
+</body>
+
+</html>
