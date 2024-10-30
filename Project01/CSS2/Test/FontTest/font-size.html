@@ -6,7 +6,13 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>字体大小</title>
     <style>
+        /* 浏览器支持的最小文字为12px() ，默认的文字大小为16px ，并且0px 会自动消失 */
+        /* 不同浏览器默认的字体大小可能不一致，所以最好给一个明确的值，不要用默认大小。 */
+        /* 通常以给 body 设置font-size 属性，这样body 中的其他元素就都可以继承了。 */
         body {
+            /* 实际设置的是字体框的高度，宽度同时比例增加*/
+            /* 字符最终呈现的大小由于字体设计原因并不一定与设置的值相等 */
+            /* 字符以x下边缘为基线整体靠下 */
             font-size: 20px;
         }
 

@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>文本对齐</title>
+    <style>
+        div:first-child {
+            text-align: center;
+        }
+
+        body>div:nth-child(2) {
+            text-align: right;
+        }
+        /* 默认值 */
+        /* 该选择器会被live server插入的script打乱 */
+        div:last-child{
+            text-align: left;
+            color: purple;
+        }
+    </style>
+</head>
+
+<body>
+    <div>Lorem ipsum dolor sit amet.</div>
+    <div>Lorem ipsum dolor sit amet.</div>
+    <div>Lorem ipsum dolor sit amet.</div>
+</body>
+
+</html>

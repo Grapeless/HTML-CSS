@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>
+        vertical-align
+    </title>
+    <style>
+        /* 控制所在行垂直方向上的对齐方式 */
+        div {
+            font-size: 40px;
+            background-color: aqua;
+            line-height: 60px;
+        }
+
+        span {
+            /* 这里的字体大小小于父元素的才能看到效果 */
+            font-size: 20px;
+            background-color: pink;
+            vertical-align: bottom;     /* top,bottle,middle,baseline(默认) */
+            line-height: 30px;
+        }
+    </style>
+</head>
+
+<body>
+    <div>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit.x Lorem ipsum dolor sit amet consectetur adipisicing
+        elit. Expedita nobis dolorem quod et, accusamus unde quas, quae debitis delectus, sed ab quibusdam. Debitis
+        veritatis enim ex, odit qui corporis provident.x <span>xUnattractive</span>
+    </div>
+</body>
+
+</html>

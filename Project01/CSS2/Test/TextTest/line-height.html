@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>行高</title>
+    <style>
+        /* 可以看到字体并不是完全垂直居中，以x下边缘处的基线为基准，整体偏下 */
+        /* 一行的实际行高取决与该行内所有元素设置的那个最高的行高，仍然以基线对齐 */
+        div:first-child {
+            /* 如果这两值相近，就可能会上下打架哦 */
+            /* font-size: 32px; */
+            /* line-height: 32px; */
+            font-size: 20px;
+            line-height: 30px; /* 1. */
+        }
+
+        div:nth-child(2) {
+            /* normal为，不写该属性时，浏览器应用的默认效果*/
+            line-height: normal;  /* 2. */
+        }
+
+        div:nth-child(3) {
+            font-size: 20px;
+ 
+            line-height: 1.5;  /*3. 为font-size大小的倍数，推荐设为1~2之间 */
+            line-height: 150%;  /*4. 为font-size大小的百分数，推荐设为100%~200%之间 */
+
+        }
+    </style>
+</head>
+
+<body>
+
+    <div>Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet consectetur adipisicing elit. Architecto quidem, a harum
+        sequi ipsam ipsa nisi, sapiente eligendi et quis corporis. Earum sed et, laudantium natus repellat cum
+        similique, ducimus praesentium maxime ullam quae quod molestiae tempore nostrum cumque minima perferendis in
+        cupiditate? Quod nesciunt placeat modi nulla! Esse, id.</div>
+    <div>Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet consectetur adipisicing elit. Architecto quidem, a harum
+        sequi ipsam ipsa nisi, sapiente eligendi et quis corporis. Earum sed et, laudantium natus repellat cum
+        similique, ducimus praesentium maxime ullam quae quod molestiae tempore nostrum cumque minima perferendis in
+        cupiditate? Quod nesciunt placeat modi nulla! Esse, id.</div>
+    <div>Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet consectetur adipisicing elit. Architecto quidem, a harum
+        sequi ipsam ipsa nisi, sapiente eligendi et quis corporis. Earum sed et, laudantium natus repellat cum
+        similique, ducimus praesentium maxime ullam quae quod molestiae tempore nostrum cumque minima perferendis in
+        cupiditate? Quod nesciunt placeat modi nulla! Esse, id.</div>
+</body>
+
+</html>
