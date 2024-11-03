@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        /* 清除默认样式 */
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        .leftfix {
+            float: left;
+        }
+
+        .rightfix {
+            float: right;
+        }
+
+        .clearfix::after {
+            content: "";
+            display: block;
+            clear: both;
+        }
+
+        .container {
+            margin: 0 auto;
+            width: 960px;
+            text-align: center;
+            font: 16px "翩翩体-简", sans-serif;
+
+        }
+
+        .banner1 {
+            width: 540px;
+            margin: 0 10px;
+        }
+
+        .logo,
+        .banner2 {
+            width: 200px;
+        }
+
+        .logo,
+        .banner1,
+        .banner2 {
+            height: 80px;
+            line-height: 80px;
+            background-color: #ccc;
+
+        }
+
+        .order {
+            background-color: #ccc;
+            height: 30px;
+            line-height: 30px;
+            margin: 10px 0;
+        }
+
+        .block1,
+        .block2 {
+            height: 198px;
+            width: 368px;
+            border: 1px solid black;
+            margin-right: 10px;
+        }
+
+        .block3,
+        .block4,
+        .block5,
+        .block6 {
+            height: 198px;
+            width: 178px;
+            border: 1px solid black;
+            margin: 10px;
+            margin-left: 0;
+
+        }
+
+        .block7,
+        .block8,
+        .block9 {
+            width: 198px;
+            height: 128px;
+            border: 1px solid black;
+            margin-bottom: 10px;
+        }
+
+        .footer{
+            height: 60px;
+            line-height: 60px;
+            background-color: #ccc;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <!-- 头 -->
+        <div class="clearfix ">
+            <div class="leftfix logo">logo</div>
+            <div class="leftfix banner1">banner1</div>
+            <div class="leftfix banner2">banner2</div>
+        </div>
+
+        <!-- 菜单 -->
+        <div class="order">菜单</div>
+
+        <!-- body -->
+        <div class="main_body clearfix">
+            <!-- 左 -->
+            <div class="leftfix">
+                <!-- 左上 -->
+                <div class="clearfix body_left_top">
+                    <div class="leftfix block1">栏目二</div>
+                    <div class="leftfix block2">栏目一</div>
+                </div>
+                <!-- 左下 -->
+                <div class="clearfix body_left_bottom">
+                    <div class="leftfix block3">栏目三</div>
+                    <div class="leftfix block4">栏目四</div>
+                    <div class="leftfix block5">栏目五</div>
+                    <div class="leftfix block6">栏目六</div>
+                </div>
+            </div>
+            <!-- 右 -->
+            <div class="rightfix body_right">
+                <div class="block7">栏目七</div>
+                <div class="block8">栏目八</div>
+                <div class="block9">栏目九</div>
+            </div>
+        </div>
+        <!-- 页脚 -->
+        <div class="footer">页脚</div>
+    </div>
+
+
+</body>
+
+</html>
