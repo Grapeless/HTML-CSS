@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .outer {
+            width: 400px;
+            height: 224px;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .inner {
+            width: 400px;
+            height: 224px;
+            background-color: black;
+            color: white;
+            line-height: 224px;
+            position: absolute;
+            left: 0;
+            top: 0;
+            opacity: 0;
+            font-size: 100px;
+            text-align: center;
+            transition-property: all;
+            transition-duration: 0.5s;
+            transition-timing-function: linear;
+        }
+
+        img{
+            transition: all 0.5s linear;
+        }
+
+        .inner:hover{
+            opacity: 0.5;
+        }
+        .outer:hover>img {
+            transform: scale(1.6) rotate(20deg);
+        }
+    </style>
+</head>
+
+<body>
+    <div class="outer">
+        <img src="../Picture/shanghai.jpg" alt="">
+        <div class="inner">上海</div>
+    </div>
+</body>
+
+</html>

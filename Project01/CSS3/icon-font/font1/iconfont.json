@@ -1,0 +1,37 @@
+{
+  "id": "4735541",
+  "name": "6666",
+  "font_family": "iconfont",
+  "css_prefix_text": "icon-",
+  "description": "",
+  "glyphs": [
+    {
+      "icon_id": "42093391",
+      "name": "蓝莓",
+      "font_class": "lanmei",
+      "unicode": "e6ef",
+      "unicode_decimal": 59119
+    },
+    {
+      "icon_id": "42093395",
+      "name": "梨子",
+      "font_class": "lizi",
+      "unicode": "e6f0",
+      "unicode_decimal": 59120
+    },
+    {
+      "icon_id": "42093428",
+      "name": "葡萄",
+      "font_class": "putao",
+      "unicode": "e6f8",
+      "unicode_decimal": 59128
+    },
+    {
+      "icon_id": "42093468",
+      "name": "香蕉",
+      "font_class": "xiangjiao",
+      "unicode": "e700",
+      "unicode_decimal": 59136
+    }
+  ]
+}
