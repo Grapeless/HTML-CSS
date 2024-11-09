@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    .container {
+      margin: 0 auto;
+      display: grid;
+      width: 300px;
+      height: 300px;
+
+      /* 1.直接指定每行每列长度 */
+      /* grid-template-columns: 33.3% 33.3% 33.3%; */
+      /* grid-template-rows: 33.3% 33.3% 33.3%; */
+      /* 1.1复合属性 */
+      /* grid-template:repeat(3, 1fr)/repeat(3, 1fr) ; */   
+
+      /* 2.repeat(n,) 重复指定份数，或是使用自动填充，表示将尽可能多的创建*/
+      /* grid-template-columns: repeat(2, 50%); */
+      /* grid-template-rows: repeat(2, 50%); */
+      /* grid-template-rows: repeat(2,200px 50px); */
+      /* grid-template-columns: repeat(2,200px 50px); */
+      /* grid-template-rows: repeat(auto-fill,100px); */
+      /* grid-template-columns: repeat(auto-fill,50px); */
+
+      /* 3.fr 比例权重*/
+      grid-template-columns: repeat(3, 1fr);
+      grid-template-rows: repeat(3, 1fr);
+
+      /* 4.minmax(min,max) 保证该长度在min-max之间自适应*/
+      /* grid-template-columns: repeat(2,minmax(50px,100px)); */
+      /* grid-template-rows: repeat(2,minmax(50px,100px)); */
+
+      /* 5.格间间距 */
+      /* row-gap: 10px; */
+      /* column-gap: 10px; */
+      /* gap: 10px;  */
+      /* 复合属性 */
+
+      /* 8.栅格流动方式 */
+      grid-auto-flow: row dense;   /* row-默认,column。dense-未放置的元素自动填充在缝隙中*/
+
+      /* 9.容器空间大于栅格空间时，可使用的类似flex布局的属性控制栅格项的对齐方式 */
+      /* justify-content: ; */
+      /* align-content: ; */
+      /* place-content: ; */  /* 复合属性 */
+
+      /* 10.栅格未设置宽高时，可控制全部栅格在自己的栅格空间内的对齐方式 */
+      /* justify-items: ; */
+      /* align-items: ; */
+      /* place-items: ; */  /* 复合属性 */
+
+    }
+
+    .container>div:first-child {
+      /* width: 100px; */
+      /* height: 100px; */
+      background-color: palegoldenrod;
+      border: 1px solid black;
+      box-sizing: border-box;
+      padding: 10px;
+
+      /* 6.根据栅格线放置元素 */
+      /* grid-row-start: 2; */
+      /* grid-row-end: 3; */
+      /* grid-column-start: 2; */
+      /* grid-column-end: 3; */
+
+      /* 6.1为栅格线命名 */
+      /* 6.2使用span指定跨度 */
+      /* grid-row-start: 2;
+      grid-column-start: 1;
+      grid-row-end: span 1;
+      grid-column-end: span 2; */
+      /* 6.3复合属性 */
+      grid-row: 2 / span 1;
+      grid-column: 1 / span 2;
+      grid-area: 1/2/2/2; /* rs/re/cs/ce */
+
+      /* 11.控制自身栅格在自己的栅格空间内的对齐方式 */
+      /* justify-self: ; */
+      /* align-self: ; */
+      /* place-self: ; */  /* 复合属性 */
+
+    }
+
+    .container>div:nth-child(2) {
+      background-color: palegoldenrod;
+      border: 1px solid black;
+      box-sizing: border-box;
+      padding: 10px;
+      /* 7.使用栅格区域布置元素 */
+      /* grid-template-areas: ; */
+    }
+  </style>
+</head>
+
+<body>
+  <div class="container">
+    <div></div>
+    <div></div>
+  </div>
+</body>
+
+</html>
