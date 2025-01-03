@@ -1,0 +1,45 @@
+// out: ./export/
+//5.导出： //out:url   只能放在第一行
+    //1.1 导入文件夹需要在路径后面补上一个/，否则被视为在导出创建一个指定文件名的.css文件
+    //1.2 缺省所需导出的.css文件名时，默认使用目前.less的文件名
+
+//7.禁止导出： // out:false
+
+//1.运算
+.s1{
+    //+ - * /
+    width: 100px + 100px;
+    height: 100 - 60px;
+    line-height: 2 * 20px;
+    border: 50./ 10px;
+    border: (50/10)px;
+    margin: (50/5px);
+    //出现多个单位以第一个出现的为准
+    padding: 3rem + 4px;
+    padding: 3px + 4rem;
+    display: flex;
+}
+
+
+//2.嵌套
+.outer{
+    width: 100px;
+    .inner{
+        height: 100px;
+        //2.1. & 生成子代而非后代选择器
+        &:hover{
+            background-color: gray;
+        }
+        &.min{
+            color: red;
+        }
+    }
+}
+
+//3.变量
+@color1:blue;
+@height1:100px;
+.s2{
+    background-color: @color1;
+    height: @height1;
+}
