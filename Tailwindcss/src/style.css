@@ -1,3 +1,10 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+@layer utilities {
+    .abc{
+        @apply mx-auto mt-5 flex h-64 w-8/12 flex-col items-center justify-evenly  bg-gradient-to-tr from-slate-100
+        via-pink-100 to-sky-100 text-center font-mono from-50% via-70% to-90% rounded
+    }
+}
